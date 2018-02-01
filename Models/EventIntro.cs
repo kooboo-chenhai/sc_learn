@@ -6,7 +6,7 @@ using System.Web;
 namespace Website.Models
 {
     public class EventIntro
-    {
+    { 
         public EventIntro() { }
         public HtmlString Heading { get; set; }
         public HtmlString Intro { get; set; }
