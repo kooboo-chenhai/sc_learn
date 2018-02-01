@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4953AAA9-9F2A-4A27-B95D-53A514E60418}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Website</RootNamespace>
+    <AssemblyName>Website</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.Cors">
+      <HintPath>bin\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>bin\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Kernel, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Mvc, Version=1.0.4549.26863, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Mvc.Analytics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.Mvc.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Css\addition.css" />
+    <Content Include="Views\Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="Views\Css\bower_components\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Views\Css\Difficulty.css" />
+    <Content Include="Views\Css\font-awesome.min.css" />
+    <Content Include="Views\Css\niteflight.min.css" />
+    <Content Include="Views\Css\vendor.min.css" />
+    <Content Include="Views\fonts\bitter-v7-latin-700.svg" />
+    <Content Include="Views\fonts\bitter-v7-latin-italic.svg" />
+    <Content Include="Views\fonts\bitter-v7-latin-regular.svg" />
+    <Content Include="Views\fonts\fontawesome-webfont.svg" />
+    <Content Include="Views\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Views\fonts\open-sans-v13-latin-300.svg" />
+    <Content Include="Views\fonts\open-sans-v13-latin-300italic.svg" />
+    <Content Include="Views\fonts\open-sans-v13-latin-600.svg" />
+    <Content Include="Views\fonts\open-sans-v13-latin-600italic.svg" />
+    <Content Include="Views\fonts\open-sans-v13-latin-700.svg" />
+    <Content Include="Views\fonts\open-sans-v13-latin-700italic.svg" />
+    <Content Include="Views\fonts\open-sans-v13-latin-800.svg" />
+    <Content Include="Views\fonts\open-sans-v13-latin-italic.svg" />
+    <Content Include="Views\fonts\open-sans-v13-latin-regular.svg" />
+    <Content Include="Views\Images\carousel-climbing.jpg" />
+    <Content Include="Views\Images\carousel-cycling.jpg" />
+    <Content Include="Views\Images\carousel-hiking.jpg" />
+    <Content Include="Views\Images\carousel-skiing.jpg" />
+    <Content Include="Views\Images\climbing-events.jpg" />
+    <Content Include="Views\Images\Climbing-the-Face-of-Half-Dome.jpg" />
+    <Content Include="Views\Images\cycling-events.jpg" />
+    <Content Include="Views\Images\Cycling-from-Bangkok-to-Chiang-Mai.jpg" />
+    <Content Include="Views\Images\hiking-events.jpg" />
+    <Content Include="Views\Images\Hiking-the-Italian-Alps.jpg" />
+    <Content Include="Views\Images\Logo_400x60.png" />
+    <Content Include="Views\Images\Rock-Climbing-in-the-Czech-Republic.jpg" />
+    <Content Include="Views\Images\skiing-events.jpg" />
+    <Content Include="Views\Images\Skiing-the-Himalayas.jpg" />
+    <Content Include="Views\Scripts\Navigation.js" />
+    <Content Include="Views\Scripts\Sitecore.Foundation.Theming.min.js" />
+    <Content Include="Views\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TAC\Careers\Columns\OneColumn.cshtml" />
+    <Content Include="Views\TAC\Careers\Columns\TwoColumn.cshtml" />
+    <Content Include="Views\TAC\Careers\Content\ChildList.cshtml" />
+    <Content Include="Views\TAC\Careers\Content\FooterContent.cshtml" />
+    <Content Include="Views\TAC\Careers\Content\JobContent.cshtml" />
+    <Content Include="Views\TAC\Careers\Content\JobDetails.cshtml" />
+    <Content Include="Views\TAC\Careers\Content\JobImage.cshtml" />
+    <Content Include="Views\TAC\Careers\Content\JobRelated.cshtml" />
+    <Content Include="Views\TAC\Careers\Content\PageContent.cshtml" />
+    <Content Include="Views\TAC\Careers\Content\PageIntro.cshtml" />
+    <Content Include="Views\TAC\Careers\Content\Spotlight.cshtml" />
+    <Content Include="Views\TAC\Careers\Navigation\Breadcrumb.cshtml" />
+    <Content Include="Views\TAC\Careers\Navigation\MainNavigation.cshtml" />
+    <Content Include="Views\TAC\Careers\Navigation\MetaNavigation.cshtml" />
+    <Content Include="Views\TAC\Layouts\Careers\Default.cshtml" />
+    <Content Include="Views\TAC\Shared\_Careers.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="Views\Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="Views\Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="Views\Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Css\bower_components\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Views\Css\bower_components\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Views\Css\bower_components\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Views\Css\bower_components\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Views\Css\bower_components\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Views\fonts\bitter-v7-latin-700.eot" />
+    <Content Include="Views\fonts\bitter-v7-latin-700.ttf" />
+    <Content Include="Views\fonts\bitter-v7-latin-700.woff" />
+    <Content Include="Views\fonts\bitter-v7-latin-700.woff2" />
+    <Content Include="Views\fonts\bitter-v7-latin-italic.eot" />
+    <Content Include="Views\fonts\bitter-v7-latin-italic.ttf" />
+    <Content Include="Views\fonts\bitter-v7-latin-italic.woff" />
+    <Content Include="Views\fonts\bitter-v7-latin-italic.woff2" />
+    <Content Include="Views\fonts\bitter-v7-latin-regular.eot" />
+    <Content Include="Views\fonts\bitter-v7-latin-regular.ttf" />
+    <Content Include="Views\fonts\bitter-v7-latin-regular.woff" />
+    <Content Include="Views\fonts\bitter-v7-latin-regular.woff2" />
+    <Content Include="Views\fonts\fontawesome-webfont.eot" />
+    <Content Include="Views\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Views\fonts\fontawesome-webfont.woff" />
+    <Content Include="Views\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Views\fonts\FontAwesome.otf" />
+    <Content Include="Views\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Views\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Views\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Views\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\fonts\open-sans-v13-latin-300.eot" />
+    <Content Include="Views\fonts\open-sans-v13-latin-300.ttf" />
+    <Content Include="Views\fonts\open-sans-v13-latin-300.woff" />
+    <Content Include="Views\fonts\open-sans-v13-latin-300.woff2" />
+    <Content Include="Views\fonts\open-sans-v13-latin-300italic.eot" />
+    <Content Include="Views\fonts\open-sans-v13-latin-300italic.ttf" />
+    <Content Include="Views\fonts\open-sans-v13-latin-300italic.woff" />
+    <Content Include="Views\fonts\open-sans-v13-latin-300italic.woff2" />
+    <Content Include="Views\fonts\open-sans-v13-latin-600.eot" />
+    <Content Include="Views\fonts\open-sans-v13-latin-600.ttf" />
+    <Content Include="Views\fonts\open-sans-v13-latin-600.woff" />
+    <Content Include="Views\fonts\open-sans-v13-latin-600.woff2" />
+    <Content Include="Views\fonts\open-sans-v13-latin-600italic.eot" />
+    <Content Include="Views\fonts\open-sans-v13-latin-600italic.ttf" />
+    <Content Include="Views\fonts\open-sans-v13-latin-600italic.woff" />
+    <Content Include="Views\fonts\open-sans-v13-latin-600italic.woff2" />
+    <Content Include="Views\fonts\open-sans-v13-latin-700.eot" />
+    <Content Include="Views\fonts\open-sans-v13-latin-700.ttf" />
+    <Content Include="Views\fonts\open-sans-v13-latin-700.woff" />
+    <Content Include="Views\fonts\open-sans-v13-latin-700.woff2" />
+    <Content Include="Views\fonts\open-sans-v13-latin-700italic.eot" />
+    <Content Include="Views\fonts\open-sans-v13-latin-700italic.ttf" />
+    <Content Include="Views\fonts\open-sans-v13-latin-700italic.woff" />
+    <Content Include="Views\fonts\open-sans-v13-latin-700italic.woff2" />
+    <Content Include="Views\fonts\open-sans-v13-latin-800.eot" />
+    <Content Include="Views\fonts\open-sans-v13-latin-800.ttf" />
+    <Content Include="Views\fonts\open-sans-v13-latin-800.woff" />
+    <Content Include="Views\fonts\open-sans-v13-latin-800.woff2" />
+    <Content Include="Views\fonts\open-sans-v13-latin-italic.eot" />
+    <Content Include="Views\fonts\open-sans-v13-latin-italic.ttf" />
+    <Content Include="Views\fonts\open-sans-v13-latin-italic.woff" />
+    <Content Include="Views\fonts\open-sans-v13-latin-italic.woff2" />
+    <Content Include="Views\fonts\open-sans-v13-latin-regular.eot" />
+    <Content Include="Views\fonts\open-sans-v13-latin-regular.ttf" />
+    <Content Include="Views\fonts\open-sans-v13-latin-regular.woff" />
+    <Content Include="Views\fonts\open-sans-v13-latin-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TAC\Events\Layouts\Home.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56063</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56063/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
