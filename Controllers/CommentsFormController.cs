@@ -10,5 +10,14 @@ namespace Website.Controllers
 {
     public class CommentsFormController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Index(string email, string comment)
+        {
+            return View("Comfirmation");
+        }
     }
 }

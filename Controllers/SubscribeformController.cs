@@ -10,5 +10,14 @@ namespace Website.Controllers
 {
     public class SubscribeformController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Index(string email)
+        {
+            return View("Comfirmation");
+        }
     }
 }

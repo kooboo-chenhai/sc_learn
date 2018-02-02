@@ -1,9 +1,15 @@
 ﻿@model Website.Models.FeatuedEvent
-<!-- [Breadcrumb Navigation] -->
-<ol class="breadcrumb">
-    @foreach (var navItem in Model)
-    {
-        <li class="@(navItem.Active ? "active" : string.Empty)"><a href="@navItem.URL">@navItem.Title</a></li>
-    }
-</ol>
-<!-- [/Breadcrumb Navigation] -->
+<div class="col-sm-4">
+    <div class="thumbnail">
+        <a href="Event-Detail.html">
+            @Model.EventImage
+        </a>
+        <div class="caption">
+            <h3 class="teaser-heading">@Model.Heading</h3>
+            <p>
+                @Model.Intro
+            </p>
+            <a href="Event-Detail.html" class="btn btn-default">Read more</a>
+        </div>
+    </div>
+</div>

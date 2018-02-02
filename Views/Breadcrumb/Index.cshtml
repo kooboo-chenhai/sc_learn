@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Website.Models.NavigationItem>
+    <!-- [Breadcrumb Navigation] -->
+    <ol class="breadcrumb">
+       @foreach (var navItem in Model)
+        {
+        <li class="@(navItem.Active ? " active" : string.Empty)"><a href="@navItem.URL">@navItem.Title</a></li>
+        }
+    </ol>
+    <!-- [/Breadcrumb Navigation] -->

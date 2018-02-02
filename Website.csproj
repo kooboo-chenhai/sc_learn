@@ -131,7 +131,11 @@
     <Compile Include="Controllers\RelatedEventsController.cs" />
     <Compile Include="Controllers\SubscribeformController.cs" />
     <Compile Include="Models\EventIntro.cs" />
+    <Compile Include="Models\FeatureEvent.cs" />
     <Compile Include="Models\NavigationItem.cs" />
+    <Compile Include="Models\NavigationMenu.cs" />
+    <Compile Include="Models\OverviewItem.cs" />
+    <Compile Include="Models\OverviewList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +165,23 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="Views\EventIntro\Index.cshtml" />
+    <Content Include="Views\TAC\Events\Layouts\Events.cshtml" />
+    <Content Include="Views\TAC\Events\HomeContent.cshtml" />
+    <Content Include="Views\TAC\Events\One-Column.cshtml" />
+    <Content Include="Views\TAC\Events\PageContent.cshtml" />
+    <Content Include="Views\TAC\Events\PageHeader.cshtml" />
+    <Content Include="Views\TAC\Events\SiteContent.cshtml" />
+    <Content Include="Views\TAC\Events\Two-Column.cshtml" />
+    <Content Include="Views\FeaturedEvent\Index.cshtml" />
+    <Content Include="Views\Breadcrumb\Index.cshtml" />
+    <Content Include="Views\CommentsForm\Comfiremation.cshtml" />
+    <Content Include="Views\CommentsForm\Index.cshtml" />
+    <Content Include="Views\Navigation\Index.cshtml" />
+    <Content Include="Views\Overview\Index.cshtml" />
+    <Content Include="Views\RelatedEvents\Index.cshtml" />
+    <Content Include="Views\Shared\ExperienceExplorerView.cshtml" />
+    <Content Include="Views\Subscribeform\Comfiremation.cshtml" />
+    <Content Include="Views\Subscribeform\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
