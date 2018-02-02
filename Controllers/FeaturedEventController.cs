@@ -16,10 +16,10 @@ namespace Website.Controllers
             return View(CreateModel());
         }
 
-        private static FeatureEvent CreateModel()
+        private static FeaturedEvent CreateModel()
         {
             var item = RenderingContext.Current.Rendering.Item;
-            var featuredEvent = new FeatureEvent()
+            var featuredEvent = new FeaturedEvent()
             {
                 Heading = new HtmlString(FieldRenderer.Render(item, "ContentHeading")),
                 EventImage = new HtmlString(FieldRenderer.Render(item, "ContentHeading")),

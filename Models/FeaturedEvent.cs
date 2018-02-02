@@ -5,9 +5,9 @@ using System.Web;
 
 namespace Website.Models
 {
-    public class FeatureEvent
+    public class FeaturedEvent
     {
-        public  FeatureEvent() {  }
+        public  FeaturedEvent() {  }
         public HtmlString Heading { get; set; }
         public HtmlString Intro { get; set; }
         public HtmlString EventImage { get; set; }

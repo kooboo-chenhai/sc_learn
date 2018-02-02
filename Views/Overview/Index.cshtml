@@ -1,48 +1,20 @@
-﻿<!-- [Category List] -->
+﻿@model Website.Models.OverviewList
+@using Sitecore.Mvc.Extensions
+    <!-- [Category List] -->
 <ul class="block-grid-md-4 block-grid-sm-3 block-grid-xs-1">
-    <li>
-        <div class="thumbnail">
-            <a href="Event-List.html">
-                <img src="Images/climbing-events.jpg" class="img-responsive" alt="Climbing" width="500" height="333" />
-            </a>
-            <div class="caption">
-                <h3 class="teaser-heading">Climbing</h3>
-                <a href="Event-List.html" class="btn btn-default">Read more</a>
+    @foreach (var item in Model)
+    {
+        <li>
+            <div class="thumbnail">
+                <a href="Event-List.html">
+                    @item.Image
+                </a>
+                <div class="caption">
+                    <h3 class="teaser-heading"> @item.Title</h3>
+                    <a href="@item.Url" class="btn btn-default">Read more</a>
+                </div>
             </div>
-        </div>
-    </li>
-    <li>
-        <div class="thumbnail">
-            <a href="Event-List.html">
-                <img src="Images/cycling-events.jpg" class="img-responsive" alt="cycling" width="500" height="332" />
-            </a>
-            <div class="caption">
-                <h3 class="teaser-heading">Cycling</h3>
-                <a href="Event-List.html" class="btn btn-default">Read more</a>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="thumbnail">
-            <a href="Event-List.html">
-                <img src="Images/hiking-events.jpg" class="img-responsive" alt="Hiking" width="500" height="333" />
-            </a>
-            <div class="caption">
-                <h3 class="teaser-heading">Hiking</h3>
-                <a href="Event-List.html" class="btn btn-default">Read more</a>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="thumbnail">
-            <a href="Event-List.html">
-                <img src="Images/skiing-events.jpg" class="img-responsive" alt="ski" width="500" height="333" />
-            </a>
-            <div class="caption">
-                <h3 class="teaser-heading">Skiing</h3>
-                <a href="Event-List.html" class="btn btn-default">Read more</a>
-            </div>
-        </div>
-    </li>
+        </li>
+    }
 </ul>
-<!-- [Category List] -->
+    <!-- [Category List] -->

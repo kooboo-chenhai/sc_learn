@@ -24,6 +24,8 @@ namespace Website.Controllers
                     Title = i.DisplayName,
                     URL = Sitecore.Links.LinkManager.GetItemUrl(i)
                 });
+            var items = relatedEvents.GetItems();
+            if (!items.Any() && !Sitecore.Context.PageMode.IsExperienceEditorEditing) return new EmptyResult();
             return View(events);
         }
     }

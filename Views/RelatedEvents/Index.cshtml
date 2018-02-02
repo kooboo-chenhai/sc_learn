@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<Website.Models.NavigationItem>
-
+@using Sitecore.Mvc.Extensions
 @using(Html.EditFrame(RenderingContext.Current.ContextItem.Paths.FullPath, "Related Events", null, null ,null, null))
 {
     <div class="bg-primary side-widget">
@@ -7,9 +7,9 @@
         <div class="sidebar">
             <ul class="nav nav-pills nav-stacked">
                 @foreach(var navItem in Model){
-                <li>
-                    <a href="@navItem.URL">@navItem.Title</a>
-                </li>
+                    <li>
+                        <a href="@navItem.URL">@navItem.Title</a>
+                    </li>
                 }
             </ul>
         </div>
