@@ -120,8 +120,14 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="TAC.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\TAC.Utils.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Importer\Controllers\EventsController.cs" />
+    <Compile Include="Areas\Importer\ImporterAreaRegistration.cs" />
     <Compile Include="Controllers\BreadcrumbController.cs" />
     <Compile Include="Controllers\CommentsFormController.cs" />
     <Compile Include="Controllers\EventIntroController.cs" />
@@ -139,6 +145,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Importer\Models\Event.cs" />
     <Content Include="Views\web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +189,15 @@
     <Content Include="Views\Shared\ExperienceExplorerView.cshtml" />
     <Content Include="Views\Subscribeform\Comfirmation.cshtml" />
     <Content Include="Views\Subscribeform\Index.cshtml" />
+    <Content Include="Areas\Social\Views\Connector\Login.cshtml" />
+    <Content Include="Areas\Social\Views\Sharing\GooglePlusOneButton.cshtml" />
+    <Content Include="Areas\Social\Views\Sharing\LikeButton.cshtml" />
+    <Content Include="Areas\Social\Views\Sharing\LinkedInShareButton.cshtml" />
+    <Content Include="Areas\Social\Views\Sharing\TweetButton.cshtml" />
+    <Content Include="Areas\Social\Views\Web.config" />
+    <Content Include="Areas\Importer\Views\web.config" />
+    <Content Include="Areas\Importer\Views\Shared\Layout.cshtml" />
+    <Content Include="Areas\Importer\Views\Events\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -189,12 +205,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\tac.utils\tac.utils.csproj">
-      <Project>{1c59f3aa-127d-4d46-92a9-8eb82692b76a}</Project>
-      <Name>tac.utils</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
