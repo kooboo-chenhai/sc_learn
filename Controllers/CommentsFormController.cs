@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Website.Models;
 using Sitecore.Mvc.Presentation;
-using TAC.Utils.Mvc;
+//using TAC.Utils.Mvc;
 
 namespace Website.Controllers
 {
@@ -16,7 +16,7 @@ namespace Website.Controllers
             return View();
         }
         [HttpPost]
-        [ValidateFormHandler]
+        //[ValidateFormHandler]
         public ActionResult Index(string email, string comment)
         {
             return View("Comfirmation");
