@@ -11,13 +11,18 @@ namespace Website.Controllers
 {
     public class EventIntroController : Controller
     {
+        private readonly RenderingContext _renderingContext;
+        public EventIntroController (RenderingContext renderingContext )
+        {
+            _renderingContext = renderingContext;
+        }
         public ActionResult Index()
         {
             return View(CreateModel());
         }
-        private static EventIntro CreateModel()
+        private EventIntro CreateModel()
         {
-            var item = RenderingContext.Current.ContextItem;
+            var item = _renderingContext.ContextItem;
             var evetIntro = new EventIntro()
             {
                 Heading = new HtmlString(FieldRenderer.Render(item, "ContentHeading")),
