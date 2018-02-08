@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Sitecore;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.SecurityModel;
@@ -49,6 +50,8 @@ namespace Website.Areas.Importer.Controllers
                     var name = ItemUtil.ProposeValidItemName(ev.ContentHeading);
                     Item item = parentItem.Add(name, templateId);
                     item.Editing.BeginEdit();
+                    item[FieldIDs.Workflow] = "{0A7DF165-C05A-4665-9D5D-C1616215B755}";
+                    item[FieldIDs.WorkflowState] = "{89697C68-EDCF-4F09-A3E7-64BDDF735880}";
                     item["ContentHeading"] = ev.ContentHeading;
                     //set value to all other fields
                     item.Editing.EndEdit();

@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.ContentSearch, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Sitecore.ContentSearch.dll</HintPath>
@@ -130,6 +134,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Importer\Controllers\EventsController.cs" />
+    <Compile Include="Areas\Importer\ImporterAreaRegistration.cs" />
+    <Compile Include="Areas\Importer\Models\Event.cs" />
     <Compile Include="Controllers\BreadcrumbController.cs" />
     <Compile Include="Controllers\CommentsFormController.cs" />
     <Compile Include="Controllers\EventIntroController.cs" />
@@ -148,6 +155,15 @@
     <Compile Include="Models\OverviewItem.cs" />
     <Compile Include="Models\OverviewList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Areas\Importer\Views\Events\Index.cshtml" />
+    <Content Include="Areas\Importer\Views\Shared\Layout.cshtml" />
+    <Content Include="Areas\Importer\Views\web.config" />
+    <Content Include="Areas\Social\Views\Connector\Login.cshtml" />
+    <Content Include="Areas\Social\Views\Sharing\GooglePlusOneButton.cshtml" />
+    <Content Include="Areas\Social\Views\Sharing\LikeButton.cshtml" />
+    <Content Include="Areas\Social\Views\Sharing\LinkedInShareButton.cshtml" />
+    <Content Include="Areas\Social\Views\Sharing\TweetButton.cshtml" />
+    <Content Include="Areas\Social\Views\Web.config" />
     <None Include="Views\EventsList\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
